@@ -20,7 +20,6 @@ jobs:
         $CONDA/bin/conda env create -n awesomeness_environment
         $CONDA/bin/conda activate awesomeness_environment
         $CONDA/bin/conda install --file requirements.txt
-        $CONDA_PREFIX/bin/python setup.py develop --no-deps
     - name: Lint with flake8
       run: |
         $CONDA/bin/conda activate awesomeness_environment
