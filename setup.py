@@ -62,7 +62,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'awesomeness = ' + PACKAGE + '.__main__',
+            'awesomeness = awesomeness.__main__:main',
         ],
     },
 )
