@@ -2,6 +2,8 @@ import requests
 
 requests.packages.urllib3.disable_warnings()
 
+IP = '192.168.1.243'
+
 
 def get_http(url, session=None):
     """
@@ -16,6 +18,7 @@ def get_http(url, session=None):
     :return: response text
     """
 
+    assert IP
     session = session or requests.Session()
     response = session.get(url)
     return response.text
