@@ -40,7 +40,7 @@ setup(
                       Tracker='https://github.com/jdhalimi/awesomeness/issues'),
     url='https://awesomeness.readthedocs.io/',
     description='Project for opensource process testing.',
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
     packages=find_packages('.', exclude=('tests', 'example', 'docs')),
     python_requires='>=3.5',
     install_requires=['requests'],
