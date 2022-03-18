@@ -22,9 +22,8 @@ jobs:
         $CONDA/bin/conda install -n awesomeness_environment --file requirements.txt
     - name: Lint with flake8
       run: |
-        $CONDA/bin/conda activate awesomeness_environment
         $CONDA/bin/conda install -n awesomeness_environment flake8
-        $CONDA/bin/conda run -n awesomeness_environment flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        $CONDA/bin/conda run -n awesomeness_environment flake8 ./awesomeness ./tests --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
         $CONDA/bin/conda install -n awesomeness_environment flake8
