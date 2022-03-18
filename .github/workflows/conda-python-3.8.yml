@@ -17,6 +17,7 @@ jobs:
     - name: Install environment
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
+        $CONDA/bin/conda init bash
         $CONDA/bin/conda create -n awesomeness_environment
         $CONDA/bin/conda activate awesomeness_environment
         $CONDA/bin/conda install --file requirements.txt
