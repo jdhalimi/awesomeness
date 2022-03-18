@@ -1,4 +1,4 @@
-name: Python Package using Conda
+name: Test in conda environment
 
 on: [push]
 
@@ -26,5 +26,5 @@ jobs:
         $CONDA/bin/conda run -n awesomeness_environment flake8 ./awesomeness ./tests --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        $CONDA/bin/conda install -n awesomeness_environment flake8
+        $CONDA/bin/conda install -n awesomeness_environment pytest
         $CONDA/bin/conda run -n awesomeness_environment pytest ./tests
