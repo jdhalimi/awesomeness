@@ -18,7 +18,7 @@ jobs:
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
         $CONDA/bin/conda upgrade conda
-        $CONDA/bin/conda env create -n awesomeness_environment        
+        $CONDA/bin/conda create -n awesomeness_environment python
         $CONDA/bin/conda install -n awesomeness_environment --file requirements.txt
     - name: Lint with flake8
       run: |
